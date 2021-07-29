@@ -1,12 +1,23 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 /* BOOTSTRAP */
 import { Form, Button, Card } from "react-bootstrap";
+
+/* IMPORTING CUSTOM HOOK - CONTEXT */
+import { useAuth } from "../contexts/AuthContext";
 
 export default function Signup() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
+
+  const { signup } = useAuth();
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    signup(emailRef.current.value, passwordRef.current.value);
+  }
 
   return (
     <>
