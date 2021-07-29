@@ -7,7 +7,7 @@ import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 
 /* REACT ROUTER */
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 export default function Signup() {
   const emailRef = useRef();
@@ -16,6 +16,8 @@ export default function Signup() {
 
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const history = useHistory();
 
   const { signup } = useAuth();
 
@@ -30,6 +32,7 @@ export default function Signup() {
       setError("");
       setLoading(true);
       await signup(emailRef.current.value, passwordRef.current.value);
+      history.push("/");
     } catch {
       setError("Failed to create an account!");
     }
