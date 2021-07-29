@@ -20,22 +20,27 @@ export function AuthProvider({ children }) {
     /* RETURNS A PROMISE */
   }
 
+  /* LOGIN */
   function login(email, password) {
     return auth.signInWithEmailAndPassword(email, password);
   }
 
+  /* LOGOUT */
   function logout() {
     return auth.signOut();
   }
 
+  /* PASSWORD RESET */
   function resetPassword(email) {
     return auth.sendPasswordResetEmail(email);
   }
 
+  /* EMAIL UPDATE */
   function updateEmail(email) {
     return currentUser.updateEmail(email);
   }
 
+  /* PASSWORD UPDATE */
   function updatePassword(password) {
     return currentUser.updatePassword(password);
   }

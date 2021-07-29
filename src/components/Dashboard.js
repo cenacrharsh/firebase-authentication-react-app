@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 
+/* BOOTSTRAP */
 import { Card, Button, Alert } from "react-bootstrap";
 
+/* CONTEXT */
 import { useAuth } from "../contexts/AuthContext";
 
+/* REACT ROUTER */
 import { Link, useHistory } from "react-router-dom";
 
 export default function Dashboard() {
