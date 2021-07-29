@@ -8,7 +8,7 @@
 
 ## 🎯 Lessons Learned:
 
-- Features : `Sign Up` `Log In` `Sign Out` `Update Email` `Reset Password`
+- Features : `Sign Up` `Log In` `Sign Out` `Update Email` `Update Password` `Reset Password`
 - Used FIREBASE for Authentication (`npm i firebase`)
 - Used React Hooks : `useState` `useContext` `useEffect` and Custom Hooks
 - Used React Router : `BrowserRouter` `Route` `Switch` `Link` `useHistory` `Redirect` `PrivateRoute`
